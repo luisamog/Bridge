@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge Project Health | ARKHO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            ARKHO <span>Bridge</span>
+        </div>
+        <div class="user-profile">
+            <!-- Placeholder for user profile -->
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- SECTION 1 HEADER -->
+        <div class="section-header">
+            <h1 class="page-title">Detalle Servicios Bridge</h1>
+        </div>
+
+        <!-- KPI GRID (6 Cards) -->
+        <div class="kpi-grid kpi-grid-6">
+            <!-- 1. SLA Promedio -->
+            <div class="kpi-card">
+                <div class="kpi-title">SLA Promedio</div>
+                <div class="kpi-value" id="kpi-sla">0 días</div>
+                <div class="kpi-subtext">Inicio a Fin</div>
+            </div>
+            <!-- 2. Total en Backlog -->
+            <div class="kpi-card">
+                <div class="kpi-title">Total en Backlog</div>
+                <div class="kpi-value" id="kpi-backlog">0</div>
+                <div class="kpi-subtext">Meta SLA < 5 días</div>
+                </div>
+                <!-- 3. Levantamiento -->
+                <div class="kpi-card">
+                    <div class="kpi-title">Levantamiento</div>
+                    <div class="kpi-value" id="kpi-levantamiento">0</div>
+                    <div class="kpi-subtext">En definición</div>
+                </div>
+                <!-- 4. En Ejecución -->
+                <div class="kpi-card">
+                    <div class="kpi-title">En Ejecución</div>
+                    <div class="kpi-value" id="kpi-ejecucion">0</div>
+                    <div class="kpi-subtext">Max. 3 meses duración</div>
+                </div>
+                <!-- 5. Cerrados -->
+                <div class="kpi-card">
+                    <div class="kpi-title">Cerrados</div>
+                    <div class="kpi-value" id="kpi-cerrados">0</div>
+                    <div class="kpi-subtext">Finalizados</div>
+                </div>
+                <!-- 6. Tasa de Conversión -->
+                <div class="kpi-card">
+                    <div class="kpi-title">Tasa Conversión</div>
+                    <div class="kpi-value" id="kpi-conversion">0%</div>
+                    <div class="kpi-subtext">Nuevo Negocio</div>
+                </div>
+            </div>
+
+            <!-- CHARTS ROW -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <h3 class="chart-title">Ciclo de Tiempo Estándar (Semanas)</h3>
+                    <div class="chart-container">
+                        <canvas id="cycleTimeChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3 class="chart-title">Distribución por Fase (%)</h3>
+                    <div class="chart-container">
+                        <canvas id="distributionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAIN TABLE -->
+            <div class="table-container">
+                <div class="table-responsive">
+                    <table class="clean-table">
+                        <thead>
+                            <tr>
+                                <th class="col-client">Cliente</th>
+                                <th class="col-project">Proyecto</th>
+                                <th class="col-type">Tipo Servicio</th>
+                                <th class="col-sla-status">Estado SLA</th>
+                                <th class="col-region">Región</th>
+                                <th class="col-date">Fecha Inicio</th>
+                                <th class="col-date">Fecha Fin</th>
+                                <th class="col-number-header">HH Asignadas</th>
+                                <th class="col-number-header">HH Consumidas</th>
+                                <th class="col-stage">Etapa Actual</th>
+                                <th class="col-bool">Fondos Pagados</th>
+                                <th class="col-bool">Nuevo Negocio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bridge-table-body">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="app.js"></script>
+</body>
+
+</html>
